@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Himantha</title>
+    <meta name="description" content="Get in touch with Himantha for collaborations or opportunities.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-top: 2rem;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+        }
+        .social-links a:hover {
+            background: var(--accent-primary);
+            color: white;
+            transform: translateY(-3px);
+            border-color: var(--accent-primary);
+        }
+        @media (max-width: 992px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand text-gradient">Himantha.</a>
+        <button class="mobile-toggle" id="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="certification.html">Certifications</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="section-title fade-in text-gradient">Get in Touch</h1>
+        <p class="fade-in mb-8" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">Have a project in mind or just want to say hi? Feel free to reach out to me directly.</p>
+
+        <div class="contact-layout slide-up">
+            <!-- Contact Info -->
+            <div class="glass-card">
+                <h3 class="mb-8" style="margin-bottom: 2rem;">Contact Information</h3>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 400;">Email</h4>
+                            <a href="mailto:hello@example.com" style="font-weight: 500; font-size: 1.1rem;">hello@example.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 400;">Location</h4>
+                            <p style="font-weight: 500; font-size: 1.1rem;">Your City, Country</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mb-4 mt-8" style="margin-top: 3rem; margin-bottom: 1rem;">Social Media</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="glass-card">
+                <h3 class="mb-8" style="margin-bottom: 2rem;">Send me a message</h3>
+                
+                <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-group">
+                        <label for="name" style="color: var(--text-secondary); font-size: 0.9rem;">Your Name</label>
+                        <input type="text" id="name" class="form-control" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" style="color: var(--text-secondary); font-size: 0.9rem;">Your Email</label>
+                        <input type="email" id="email" class="form-control" required placeholder="john@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" style="color: var(--text-secondary); font-size: 0.9rem;">Subject</label>
+                        <input type="text" id="subject" class="form-control" required placeholder="Project Inquiry">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" style="color: var(--text-secondary); font-size: 0.9rem;">Message</label>
+                        <textarea id="message" class="form-control" required placeholder="Hello, I'd like to talk about..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 1rem;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

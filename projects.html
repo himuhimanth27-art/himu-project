@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Himantha</title>
+    <meta name="description" content="View Himantha's portfolio projects and previous work.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--glass-border);
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .project-links a {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+        .project-links a:hover {
+            color: var(--accent-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand text-gradient">Himantha.</a>
+        <button class="mobile-toggle" id="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="certification.html">Certifications</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="section-title fade-in text-gradient">My Projects</h1>
+        <p class="fade-in mb-8" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">A showcase of my recent work, highlighting my skills in front-end and back-end development.</p>
+
+        <div class="grid slide-up">
+            <!-- Project 1 -->
+            <div class="glass-card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop" alt="Project 1" class="project-img">
+                <h3>E-Commerce Platform</h3>
+                <p class="mt-2" style="margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem;">A full-stack e-commerce solution with seamless payment integration, dynamic cart management, and user authentication.</p>
+                <div class="project-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Project 2" class="project-img">
+                <h3>Data Analytics Dashboard</h3>
+                <p class="mt-2" style="margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem;">An interactive dashboard for visualizing complex datasets, featuring real-time updates and customizable chart components.</p>
+                <div class="project-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="Project 3" class="project-img">
+                <h3>Task Management App</h3>
+                <p class="mt-2" style="margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem;">A productivity app utilizing drag-and-drop interfaces, team collaboration features, and secure cloud synchronization.</p>
+                <div class="project-links">
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
