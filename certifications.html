@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education | Himanth B N</title>
+    <title>Certifications | Himanth B N</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -13,83 +13,33 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .timeline {
+        .cert-card {
             position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 0;
+            overflow: hidden;
         }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: var(--border-color);
-        }
-        .timeline-item {
-            position: relative;
-            width: 50%;
-            padding: 20px 40px;
-            margin-bottom: 30px;
-        }
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            top: 30px;
-            right: -10px;
-            width: 20px;
-            height: 20px;
-            background: var(--bg-color);
-            border: 3px solid var(--primary-accent);
-            border-radius: 50%;
-            z-index: 1;
-            box-shadow: 0 0 10px var(--primary-accent);
-        }
-        .timeline-item.right {
-            left: 50%;
-        }
-        .timeline-item.right::after {
-            left: -10px;
-        }
-        .timeline-content {
-            background: var(--surface-color);
-            padding: 2rem;
-            border-radius: 16px;
+        .cert-img-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
             border: 1px solid var(--border-color);
+        }
+        .cert-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             transition: var(--transition);
         }
-        .timeline-content:hover {
-            border-color: var(--primary-accent);
-            transform: scale(1.02);
-            box-shadow: 0 10px 30px var(--card-glow);
+        .custom-card:hover .cert-img {
+            transform: scale(1.05);
         }
-        .year-badge {
-            background: rgba(56, 189, 248, 0.1);
+        .cert-date {
+            font-size: 0.8rem;
             color: var(--primary-accent);
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.85rem;
             font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 30px;
-            }
-            .timeline-item {
-                width: 100%;
-                padding-left: 60px;
-                padding-right: 20px;
-            }
-            .timeline-item.right {
-                left: 0;
-            }
-            .timeline-item::after {
-                left: 20px !important;
-            }
+            display: block;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -124,23 +74,36 @@
         </div>
     </nav>
 
-    <!-- Education Section -->
+    <!-- Certifications Section -->
     <section class="pt-5 mt-5">
         <div class="container">
-            <h2 class="section-title reveal">Educational Journey</h2>
+            <h2 class="section-title reveal">Certifications</h2>
             
-            <div class="timeline">
-                <!-- Education Item 1 -->
-                <div class="timeline-item reveal">
-                    <div class="timeline-content">
-                        <span class="year-badge">2023 – 2026</span>
-                        <h3 class="h5 text-white">Bachelor of Computer Applications (BCA)</h3>
-                        <p class="text-primary mb-2">Govt First Grade College, Tiptur</p>
-                        <p class="muted-text small mb-0">Focusing on computer science fundamentals, programming, and data management systems.</p>
+            <div class="row g-4">
+                <!-- Cert 1 -->
+                <div class="col-md-6">
+                    <div class="custom-card reveal">
+                        <div class="cert-img-container">
+                            <img src="Honywell.png" alt="Artificial Intelligence" class="cert-img">
+                        </div>
+                        <span class="cert-date">Feb–Mar 2026</span>
+                        <h3 class="h5 text-white mb-2">Artificial Intelligence</h3>
+                        <p class="muted-text small mb-3">Honeywell Future Skills Edge Program | 80 Hours</p>
+                        <a href="Honywell.png" target="_blank" class="btn-secondary-custom btn-sm w-100 text-center">View Certificate</a>
                     </div>
                 </div>
-                
-                <!-- Add more items if they exist in resume -->
+                <!-- Cert 2 -->
+                <div class="col-md-6">
+                    <div class="custom-card reveal">
+                        <div class="cert-img-container">
+                            <img src="Adobe.png" alt="Multimedia Content Creation" class="cert-img">
+                        </div>
+                        <span class="cert-date">Oct 2025</span>
+                        <h3 class="h5 text-white mb-2">Multimedia Content Creation</h3>
+                        <p class="muted-text small mb-3">Adobe (Coursera)</p>
+                        <a href="Adobe.png" target="_blank" class="btn-secondary-custom btn-sm w-100 text-center">View Certificate</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

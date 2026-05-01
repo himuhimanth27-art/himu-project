@@ -3,97 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Himantha</title>
-    <meta name="description" content="View Himantha's portfolio projects and previous work.">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Projects | Himanth B N</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .project-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border: 1px solid var(--glass-border);
+        .tech-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary-accent);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
         }
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        .project-links a {
-            color: var(--accent-primary);
-            font-weight: 600;
-        }
-        .project-links a:hover {
-            color: var(--accent-secondary);
+        .project-icon {
+            font-size: 2.5rem;
+            color: var(--primary-accent);
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
         }
     </style>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader"><div class="loader"></div></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-brand text-gradient">Himantha.</a>
-        <button class="mobile-toggle" id="mobile-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="certification.html">Certifications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <!-- Background Effects -->
+    <div class="ambient-glow">
+        <canvas id="tech-canvas"></canvas>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-gradient" href="index.html">HIMANTH</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="fas fa-bars text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <h1 class="section-title fade-in text-gradient">My Projects</h1>
-        <p class="fade-in mb-8" style="text-align: center; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem;">A showcase of my recent work, highlighting my skills in front-end and back-end development.</p>
-
-        <div class="grid slide-up">
-            <!-- Project 1 -->
-            <div class="glass-card">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop" alt="Project 1" class="project-img">
-                <h3>E-Commerce Platform</h3>
-                <p class="mt-2" style="margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem;">A full-stack e-commerce solution with seamless payment integration, dynamic cart management, and user authentication.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    <a href="#"><i class="fab fa-github"></i> Source Code</a>
+    <!-- Projects Section -->
+    <section class="pt-5 mt-5">
+        <div class="container">
+            <h2 class="section-title reveal">Featured Projects</h2>
+            
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-6 mx-auto">
+                    <div class="custom-card reveal">
+                        <div class="project-icon"><i class="fas fa-file-invoice"></i></div>
+                        <h3 class="h4 mb-3 text-white">AI Resume Analyzer</h3>
+                        <p class="muted-text mb-4">
+                            Developed a comprehensive system to analyze resumes and shortlist candidates based on specific skills and keywords. This tool helps recruiters automate the initial screening process, significantly reducing manual effort and improving hiring efficiency.
+                        </p>
+                        <div class="mb-4">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Data Processing</span>
+                            <span class="tech-badge">NLP Basics</span>
+                            <span class="tech-badge">Data Handling</span>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <button class="btn-primary-custom btn-sm opacity-50" style="cursor: not-allowed;" title="Demo not available">Live Demo</button>
+                            <button class="btn-secondary-custom btn-sm opacity-50" style="cursor: not-allowed;" title="Code not available"><i class="fab fa-github me-2"></i>Source Code</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 2 -->
-            <div class="glass-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Project 2" class="project-img">
-                <h3>Data Analytics Dashboard</h3>
-                <p class="mt-2" style="margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem;">An interactive dashboard for visualizing complex datasets, featuring real-time updates and customizable chart components.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                </div>
+            <div class="mt-5 text-center reveal">
+                <p class="muted-text">More projects coming soon as I continue to build and learn.</p>
             </div>
+        </div>
+    </section>
 
-            <!-- Project 3 -->
-            <div class="glass-card">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop" alt="Project 3" class="project-img">
-                <h3>Task Management App</h3>
-                <p class="mt-2" style="margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem;">A productivity app utilizing drag-and-drop interfaces, team collaboration features, and secure cloud synchronization.</p>
-                <div class="project-links">
-                    <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    <a href="#"><i class="fab fa-github"></i> Source Code</a>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <h3 class="text-gradient fw-bold mb-2">HIMANTH</h3>
+                    <p class="muted-text small mb-0">Building data-driven solutions and exploring new technologies.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links mb-3">
+                        <a href="https://www.linkedin.com/in/himu-himanth-9b56933b8" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:himuhimanth27@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p class="muted-text small mb-0">&copy; 2026 Himanth B N. All rights reserved.</p>
                 </div>
             </div>
         </div>
-    </main>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

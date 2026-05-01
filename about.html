@@ -3,99 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Himantha</title>
-    <meta name="description" content="Learn more about Himantha and view my resume.">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>About | Himanth B N</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-        .resume-container {
-            width: 100%;
-            height: 600px;
-            border: 1px solid var(--glass-border);
+        .skill-badge {
+            background: rgba(56, 189, 248, 0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
             border-radius: 12px;
-            overflow: hidden;
-            margin-top: 2rem;
-            background: var(--bg-secondary);
+            font-size: 0.9rem;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
         }
-        @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
+        .skill-badge:hover {
+            border-color: var(--primary-accent);
+            background: rgba(56, 189, 248, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--card-glow);
+        }
+        .skill-badge i {
+            color: var(--primary-accent);
         }
     </style>
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader"><div class="loader"></div></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-brand text-gradient">Himantha.</a>
-        <button class="mobile-toggle" id="mobile-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="certification.html">Certifications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <!-- Background Effects -->
+    <div class="ambient-glow">
+        <canvas id="tech-canvas"></canvas>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-gradient" href="index.html">HIMANTH</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="fas fa-bars text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <h1 class="section-title fade-in text-gradient">About Me</h1>
-        
-        <div class="about-grid slide-up">
-            <div class="glass-card">
-                <h3 class="mb-4">My Journey</h3>
-                <p class="mb-4">I am a passionate developer dedicated to creating impactful digital experiences. I specialize in turning complex problems into simple, beautiful, and intuitive designs.</p>
-                <p>My approach to development is heavily focused on user experience and clean, maintainable code. I am constantly learning new technologies to stay ahead in the fast-paced tech industry.</p>
-                
-                <h3 class="mb-4 mt-8" style="margin-top: 2rem;">Core Skills</h3>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <span style="background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent-primary); padding: 5px 15px; border-radius: 20px; color: var(--accent-primary);">HTML/CSS</span>
-                    <span style="background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent-primary); padding: 5px 15px; border-radius: 20px; color: var(--accent-primary);">JavaScript</span>
-                    <span style="background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent-primary); padding: 5px 15px; border-radius: 20px; color: var(--accent-primary);">React</span>
-                    <span style="background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent-primary); padding: 5px 15px; border-radius: 20px; color: var(--accent-primary);">Node.js</span>
-                    <span style="background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent-primary); padding: 5px 15px; border-radius: 20px; color: var(--accent-primary);">Python</span>
+    <!-- About Section -->
+    <section class="pt-5 mt-5">
+        <div class="container">
+            <h2 class="section-title reveal">About Me</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-8">
+                    <div class="custom-card reveal">
+                        <h3 class="h4 mb-4 text-gradient"><i class="fas fa-bullseye me-2"></i>Career Objective</h3>
+                        <p class="muted-text lead">
+                            Aspiring Data Analyst skilled in Python, Excel, and DBMS. Seeking an entry-level opportunity to gain real-world experience and contribute to organizational growth.
+                        </p>
+                        <p class="muted-text">
+                            I am passionate about data exploration and technology. My journey in Computer Applications has equipped me with a solid foundation in programming and database management, which I aim to leverage in a professional environment.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="custom-card reveal">
+                        <h3 class="h4 mb-4 text-gradient"><i class="fas fa-heart me-2"></i>Interests</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-center">
+                                <div class="bg-dark rounded-circle p-2 me-3 border border-secondary">
+                                    <i class="fas fa-motorcycle text-primary"></i>
+                                </div>
+                                <span class="muted-text">Bike riding & long drives</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <div class="bg-dark rounded-circle p-2 me-3 border border-secondary">
+                                    <i class="fas fa-laptop-code text-primary"></i>
+                                </div>
+                                <span class="muted-text">Learning new technologies</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="glass-card">
-                <h3 class="mb-4">Resume</h3>
-                <p class="mb-4">Want to see more details about my experience and skills? View or download my professional resume below.</p>
-                
-                <div class="button-group mb-4">
-                    <a href="Himanth_Resume.pdf" target="_blank" class="btn btn-primary">
-                        <i class="fas fa-eye"></i> View Resume Fullscreen
-                    </a>
-                    <a href="Himanth_Resume.pdf" download class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download PDF
-                    </a>
+            <h3 class="h4 mb-4 reveal text-center">Technical Expertise</h3>
+            <div class="row g-4 mb-5">
+                <div class="col-12">
+                    <div class="custom-card reveal text-center">
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="skill-badge"><i class="fab fa-python"></i> Python (Basics)</div>
+                            <div class="skill-badge"><i class="fas fa-database"></i> DBMS / SQL</div>
+                            <div class="skill-badge"><i class="fab fa-html5"></i> HTML</div>
+                            <div class="skill-badge"><i class="fas fa-file-excel"></i> MS Excel (Basics, Charts)</div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="resume-container">
-                    <!-- Embedded PDF Viewer -->
-                    <object data="Himanth_Resume.pdf" type="application/pdf" width="100%" height="100%">
-                        <p>It appears your Web browser is not configured to display PDF files. No worries, just <a href="Himanth_Resume.pdf" class="text-gradient">click here to download the PDF file.</a></p>
-                    </object>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="custom-card reveal">
+                        <h3 class="h4 mb-4 text-gradient"><i class="fas fa-language me-2"></i>Languages</h3>
+                        <div class="d-flex flex-wrap">
+                            <div class="skill-badge">Kannada (Fluent)</div>
+                            <div class="skill-badge">English (Good)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card reveal">
+                        <h3 class="h4 mb-4 text-gradient"><i class="fas fa-user-check me-2"></i>Personal Strengths</h3>
+                        <p class="muted-text mb-0">
+                            Problem-solving, analytical thinking, and a strong desire for continuous learning and growth.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <h3 class="text-gradient fw-bold mb-2">HIMANTH</h3>
+                    <p class="muted-text small mb-0">Building data-driven solutions and exploring new technologies.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links mb-3">
+                        <a href="https://www.linkedin.com/in/himu-himanth-9b56933b8" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:himuhimanth27@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p class="muted-text small mb-0">&copy; 2026 Himanth B N. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

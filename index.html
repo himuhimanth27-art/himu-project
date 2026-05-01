@@ -3,63 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Himantha | Professional Portfolio</title>
-    <meta name="description" content="Professional portfolio of Himantha, showcasing projects, skills, and experience.">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Himanth B N | Portfolio</title>
+    <meta name="description" content="Portfolio of Himanth B N, an Aspiring Data Analyst skilled in Python, Excel, and DBMS.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader"><div class="loader"></div></div>
 
-    <!-- Navigation -->
-    <nav class="navbar slide-up">
-        <a href="index.html" class="nav-brand text-gradient">Himantha.</a>
-        
-        <button class="mobile-toggle" id="mobile-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
+    <!-- Background Effects -->
+    <div class="ambient-glow">
+        <canvas id="tech-canvas"></canvas>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
 
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="certification.html">Certifications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-gradient" href="index.html">HIMANTH</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="fas fa-bars text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <section class="hero">
-            <div class="hero-content fade-in">
-                <h2>Hello, I'm</h2>
-                <h1 class="text-gradient">Himantha</h1>
-                <h2><span class="typing-text">Software Developer</span></h2>
-                <p>Welcome to my professional portfolio. I build elegant, dynamic, and high-performance applications with a focus on modern design and user experience.</p>
-                
-                <div class="button-group">
-                    <a href="projects.html" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> View Work
-                    </a>
-                    <a href="about.html" class="btn btn-secondary">
-                        <i class="fas fa-user"></i> More About Me
-                    </a>
+    <!-- Hero Section -->
+    <section class="hero-section min-vh-100 d-flex align-items-center pt-5">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <div class="reveal">
+                        <span class="hero-tagline text-gradient fw-bold mb-2 d-block" style="letter-spacing: 3px; font-size: 0.9rem;">ASPIRING DATA ANALYST</span>
+                        <h1 class="display-3 fw-bolder mb-3">Hi, I'm <span class="text-gradient">Himanth B N</span></h1>
+                        <p class="typing-text h4 mb-4 text-secondary" data-text="Turning data into insights."></p>
+                        <p class="hero-desc lead text-secondary mb-5 max-width-600">
+                            Skilled in Python, Excel, and DBMS. Seeking an entry-level opportunity to gain real-world experience and contribute to organizational growth.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="Himanth_Resume.pdf" download class="btn-secondary-custom">Download CV</a>
+                            <a href="contact.html" class="btn-secondary-custom">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="reveal">
+                        <div class="profile-img-wrapper">
+                            <img src="profile.png" alt="Himanth B N" class="profile-img-main">
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="hero-image fade-in" style="transition-delay: 0.2s;">
-                <div class="profile-img-container">
-                    <img src="profile.png" alt="Himantha's Profile Picture" class="profile-img" onerror="this.src='https://via.placeholder.com/350/1e293b/38bdf8?text=Himantha'">
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <h3 class="text-gradient fw-bold mb-2">HIMANTH</h3>
+                    <p class="muted-text small mb-0">Building data-driven solutions and exploring new technologies.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links mb-3">
+                        <a href="https://www.linkedin.com/in/himu-himanth-9b56933b8" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:himuhimanth27@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <p class="muted-text small mb-0">&copy; 2026 Himanth B N. All rights reserved.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>
